@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Icecream Toppings By Nupur </title>
+<style>
+*{
+fontsize:60px;
+}
+h1,h3{color: #900d2f;}
+body{background-image:url("img1.jpg");}
+
+</style>
+<script>
+function show()
+{
+event.preventDefault();
+let name= document.getElementById("name");
+let or= document.getElementById("or");
+let tf= document.getElementById("tf");
+let cs= document.getElementById("cs");
+let sp= document.getElementById("sp");
+let ans= document.getElementById("ans");
+let Toppings="";
+
+if(or.checked)     Toppings+="Oreo";
+if(tf.checked)     Toppings+=" Tooti Frooti";
+if(cs.checked)     Toppings+=" Choclate Syrup";
+if(sp.checked)     Toppings+=" Sprinkles";
+
+
+
+let msg="name : " + name.value +" Toppings : "+ Toppings;
+ans.innerHTML=msg; 
+}
+</script>
+</head>
+<body>
+<center>
+<h1 >WHAT NEXT?</h1>
+<form onsubmit="show()">
+<input type="text"  placeholder="Enter Icecream Name" id="name" />
+<br><br>
+<h3>
+<input type="checkbox" id="or"/>Oreo
+<input type="checkbox" id="tf"/>Tooti Frooti
+<input type="checkbox" id="cs"/>Choclate Syrup
+<input type="checkbox" id="sp"/>Sprinkles
+<br><br>
+</h3>
+<input type="submit" value="order"/>
+
+<form>
+<h2 id="ans"></h2>
+</center>
+</body>
+
+</html>
